@@ -49,7 +49,13 @@ function App() {
 
     if (e.currentTarget.innerText === questions[number].correct_answer) {
       obj.correct = true;
+      e.currentTarget.setAttribute(
+        'style',
+        'border:3px solid green; color:green'
+      );
       setScore(score + 1);
+    } else {
+      e.currentTarget.setAttribute('style', 'border:3px solid red; color:red');
     }
 
     setUserAnswer(() => {

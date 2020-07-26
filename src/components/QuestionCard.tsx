@@ -24,17 +24,6 @@ const QuestionCard: React.FC<Props> = ({
     color: rgb(77, 13, 57);
   `;
 
-  const Button = styled.button`
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border-radius: 3px;
-
-    /* Color the border and text with theme.main */
-    color: ${(props) => props.theme.main};
-    border: 2px solid ${(props) => props.theme.main};
-  `;
-
   // Define what main theme will look like
 
   return (
@@ -47,13 +36,14 @@ const QuestionCard: React.FC<Props> = ({
         {answers.map((answer) => {
           return (
             <div>
-              <Button
-                theme={{main: 'royalblue'}}
+              <button
+                key={answer}
+                className={'but'}
                 disabled={userAnswer}
                 onClick={callback}
               >
-                <span dangerouslySetInnerHTML={{__html: answer}} />
-              </Button>
+                {answer}
+              </button>
             </div>
           );
         })}
