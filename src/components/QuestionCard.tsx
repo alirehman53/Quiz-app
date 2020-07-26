@@ -36,9 +36,6 @@ const QuestionCard: React.FC<Props> = ({
   `;
 
   // Define what main theme will look like
-  const theme = {
-    main: 'mediumseagreen',
-  };
 
   return (
     <div className={'quest'}>
