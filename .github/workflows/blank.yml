@@ -11,12 +11,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: deploying to surge
+    name: deploying to surge.sh
     
     steps:
       - uses: actions/checkout@v2
         
-      - name: install Node.js
+      - name: install Node.js Quiz app
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
